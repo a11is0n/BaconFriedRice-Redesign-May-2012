@@ -1,0 +1,221 @@
+/*
+ * Attempted to do mobile-first design, first layout focused on phones
+ *
+ * Second layout based on the 960 grid system (http://960.gs/)
+ * - At 960px wide, there are 12 columns
+ * - The 12 columns are 60px each (6.25%)
+ * - Gutters are 20px each (2.08333%)
+ * - There are 10px margins on either side (1.04167%)
+ *
+ * Third layout...
+ *
+ *  Written with help from CSS3 Please! (http://css3please.com/)
+ */
+ 
+/*
+ * Overall styling
+ * -----------------------------------------------------------------------------
+ */
+* {
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+ 
+/*
+ * Wrapper around all the content
+ * -----------------------------------------------------------------------------
+ */ 
+#wrapper {
+  width: 95%;
+  margin: 0px auto;
+}
+
+/*
+ * Header, which includes the top banner and navigation
+ * -----------------------------------------------------------------------------
+ */ 
+#header {
+  width: 97.91666%; /* 12 columns, 11 gutters */
+  margin: 0 1.04167%; /* Half a gutter */
+}
+#banner {
+  width: auto;
+  margin: 20px 0px;
+  background-color: yellow;
+  text-align: center;
+}
+#title {
+  font-size: 4em;
+}
+#nav {
+  width: auto;
+  margin: 20px 0px;
+  background-color: yellow;
+  text-align: center;
+}
+#nav ul {
+  display: inline-block;
+}
+#nav li{
+  display: inline-block;
+  padding: 5px;
+  font-size: 1em;
+}
+#nav #navSearch {
+  display: none;
+}
+
+/*
+ * Wrapper around the middle section (between header and footer)
+ * -----------------------------------------------------------------------------
+ */
+#container {
+  font-size: 1em;
+}
+
+/*
+ * Main content area in middle section
+ * -----------------------------------------------------------------------------
+ */
+#content {
+  width: 64.58333%; /* 8 columns, 7 gutters */
+  margin: 0 1.04167%; /* Half a gutter */
+  margin-bottom: 20px;
+  float: left;
+  background-color: yellow;
+}
+
+/*
+ * Blog styling
+ * -----------------------------------------------------------------------------
+ */
+.blog {
+  width: auto;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid orange;
+}
+.blogHeader, .blogFooter {
+  margin-left: 110px; /* 100px info blocks plus 10px margin */
+}
+.blogHeader {
+  padding-bottom: 20px;
+}
+.blogTitle {
+  font-size: 1.5em;
+}
+.blogCategories li, .blogComments, .blogTags li {
+  width: auto;
+  height: 16px;
+  margin: 5px 0px;
+  font-size: 16px;
+  display: inline-block;
+  padding-left: 21px; /* 16px for image plus 5px padding */
+  padding-right: 5px;
+}
+.blogCategories li {
+  list-style: none;
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogComments {
+  display: block;
+  padding-right: 0px; /* No need for right padding since there is only one */
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogTags li {
+  list-style: none;
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogContent {
+  width: auto;
+}
+.blogInfo {
+  width: 100px;
+  margin-right: 10px;
+  float: left;
+}
+.blogAuthor, .blogDate {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+}
+.blogAuthor {
+  background: url('http://placehold.it/100x100') no-repeat center center;
+  font-size: 20px;
+}
+.blogAuthorName {
+  width: 100px;
+  height: 16px;
+  margin: 5px 0px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0px;
+}
+.blogDate {
+  margin-top: 10px;
+  background-color: orange;
+}
+.blogMonth {
+  width: 100px;
+  height: 16px;
+  margin: 5px 0px;
+  font-size: 16px;
+  position: absolute;
+  top: 0px;
+}
+.blogDay {
+  height: 100px;
+  line-height: 100px;
+  font-size: 50px;
+}
+.blogYear {
+  width: 100px;
+  height: 16px;
+  margin: 5px 0px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0px;
+}
+.blogBody {
+  width: auto;
+}
+.blogFooter {
+  padding-top: 20px;
+  clear: both;
+}
+
+
+/*
+ * Side bar in middle section
+ * -----------------------------------------------------------------------------
+ */
+#sidebar {
+  width: 31.25%;
+  margin: 0 1.04167%;
+  margin-bottom: 20px;
+  float: right;
+}
+.sidebarItem {
+  width: auto;
+  background-color: yellow;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+#search, #tagCloud {
+  text-align: center;
+}
+
+/*
+ * Footer
+ * -----------------------------------------------------------------------------
+ */
+#footer {
+  clear: both;
+  width: 97.91666%;
+  margin: 20px 1.04167%;
+  padding: 5px;
+  text-align: center;
+  background-color: yellow;
+}

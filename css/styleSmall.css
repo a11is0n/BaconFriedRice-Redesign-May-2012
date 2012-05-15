@@ -1,0 +1,161 @@
+/*
+ * Stand-alone styling for first layout, focused on phones
+ */
+
+/*
+ * Overall styling
+ * -----------------------------------------------------------------------------
+ */
+* {
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+/*
+ * Wrapper around all the content
+ * -----------------------------------------------------------------------------
+ */ 
+#wrapper {
+  width: 100%;
+}
+
+/*
+ * Header, which includes the top banner and navigation
+ * -----------------------------------------------------------------------------
+ */
+#header {
+  width: auto;
+}
+#banner {
+  width: auto;
+  background-color: yellow;
+  text-align: center;
+}
+#title {
+  font-size: 4em;
+}
+#nav {
+  width: auto;
+  background-color: yellow;
+  text-align: center;
+}
+#nav ul {
+  display: inline-block;
+}
+#nav li{
+  display: inline-block;
+  padding: 5px;
+  font-size: 1em;
+}
+
+/*
+ * Wrapper around the middle section (between header and footer)
+ * -----------------------------------------------------------------------------
+ */
+#container {
+  font-size: 1em;
+}
+
+/*
+ * Main content area in middle section
+ * -----------------------------------------------------------------------------
+ */
+#content {
+  width: auto;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: yellow;
+}
+
+/*
+ * Blog styling
+ * -----------------------------------------------------------------------------
+ */
+.blog {
+  width: auto;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid orange;
+}
+.blogHeader, .blogFooter {
+  width: auto;
+  
+}
+.blogTitle {
+  font-size: 1.5em;
+}
+.blogCategories li, .blogComments, .blogAuthor, .blogDate, .blogTags li {
+  width: auto;
+  height: 16px;
+  margin: 5px 0px;
+  font-size: 16px;
+  display: inline-block;
+  padding-left: 21px; /* 16px for image plus 5px padding */
+  padding-right: 5px;
+}
+.blogCategories li {
+  list-style: none;
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogComments {
+  display: block;
+  padding-right: 0px; /* No need for right padding since there is only one */
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogTags li {
+  list-style: none;
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogContent {
+  width: auto;
+}
+.blogInfo {
+  width: auto;
+}
+.blogAuthor, .blogDate {
+  display: block;
+  margin: 10px 0px;
+  padding-right: 0px; /* No need for right padding since there is only one */
+  background: url('http://placehold.it/16x16') no-repeat top left;
+}
+.blogMonth, .blogDay, .blogYear {
+  display: inline;
+}
+.blogBody {
+  width: auto;
+  padding: 10px 0px;
+}
+.blogFooter {
+  padding-top: 10px;
+}
+
+/*
+ * Side bar in middle section
+ * -----------------------------------------------------------------------------
+ */
+#sidebar {
+  width: auto;
+}
+.sidebarItem {
+  width: auto;
+  margin: 20px 0px;
+  padding: 10px;
+  background-color: yellow;
+}
+#search, #tagCloud {
+  text-align: center;
+}
+#intro, #tagCloud, #twitter {
+  display: none;
+}
+
+/*
+ * Footer
+ * -----------------------------------------------------------------------------
+ */
+#footer {
+  width: auto;
+  padding: 5px;
+  text-align: center;
+  background-color: yellow;
+}
