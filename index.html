@@ -40,10 +40,13 @@
     <!-- Use local HTML5 Doctor CSS Reset when developing locally -->
     <link rel="stylesheet" href="css/html5reset-1.6.1.css" />
     
-    <!-- My stylesheet -->
+    <!-- Standalone stylesheets used during testing -->
     <!--<link rel="stylesheet" href="css/styleSmall.css" />-->
-    <link rel="stylesheet" href="css/styleNormal.css" />
-    <!--<link ref="stylesheet" href="css/styleBig.css" />-->
+    <!--<link rel="stylesheet" href="css/styleNormal.css" />-->
+    <link rel="stylesheet" href="css/styleBig.css" />
+    
+    <!-- Combined stylesheet with media queries -->
+    <!--<link rel="stylesheet" href="css/style.css" />-->
    
   </head>
  
@@ -57,12 +60,17 @@
         <div id="banner">
        
           <h1 id="title">
-            BFR
+            <div id="smallTitle">
+              BFR
+            </div>
+            <div id="normalTitle">
+              BaconFriedRice
+            </div>
           </h1>
        
         </div>
        
-        <nav id="nav">
+        <nav class="nav" id="nav">
        
           <ul>
             <li id="navAbout">
@@ -82,6 +90,34 @@
             </li>
           </ul>
        
+        </nav>
+        
+        <nav class="nav" id="categories">
+        
+          <ul>
+            <li>
+              books
+            </li>
+            <li>
+              bacon
+            </li>
+            <li>
+              blah
+            </li>
+            <li>
+              cats
+            </li>
+            <li>
+              piggies
+            </li>
+            <li>
+              pandas
+            </li>
+            <li>
+              games
+            </li>
+            
+        
         </nav>
      
       </header>

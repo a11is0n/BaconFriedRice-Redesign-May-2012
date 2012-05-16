@@ -1,3 +1,130 @@
 /*
- * Stand-alone styling for third layout
+ * Stand-alone styling for third layout, based on 960 grid system
  */
+ 
+/*
+ * Overall styling
+ * -----------------------------------------------------------------------------
+ */
+* {
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+/*
+ * Wrapper around all the content
+ * -----------------------------------------------------------------------------
+ */ 
+#wrapper {
+  width: 95%;
+  margin: 0px auto;
+  border: 1px solid black;
+}
+
+/*
+ * Header, which includes the top banner and navigation
+ * -----------------------------------------------------------------------------
+ */ 
+#header {
+  width: 47.91666%; /* 6 columns, 5 gutters */
+  margin: 0 1.04167%; /* Half a gutter */
+  float: right;
+}
+#banner {
+  width: auto;
+  margin: 20px 0px;
+  background-color: yellow;
+  text-align: center;
+}
+#title {
+  font-size: 4em;
+}
+#smallTitle {
+  display: none;
+}
+.nav {
+  width: auto;
+  margin-bottom: 20px;
+  background-color: yellow;
+  text-align: center;
+}
+.nav ul {
+  display: inline-block;
+}
+.nav li {
+  display: inline-block;
+  padding: 5px;
+  font-size: 1em;
+}
+.nav #navSearch {
+  display: none;
+}
+
+/*
+ * Wrapper around the middle section (between header and footer)
+ * -----------------------------------------------------------------------------
+ */
+#container {
+  width: auto;
+  font-size: 1em;
+}
+
+/*
+ * Main content area in middle section
+ * -----------------------------------------------------------------------------
+ */
+#content {
+  width: 47.91666%; /* 6 columns, 5 gutters */
+  margin: 20px 1.04167%; /* Half a gutter */
+  float: left;
+  background-color: yellow;
+}
+
+/*
+ * Blog styling
+ * -----------------------------------------------------------------------------
+ */
+
+ 
+/*
+ * Side bar in middle section
+ * -----------------------------------------------------------------------------
+ */
+#sidebar {
+  width: 47.91666%; /* 6 columns, 5 gutters */
+  margin: 0 1.04167%; /* Half a gutter */
+  float: right;
+}
+.sidebarItem {
+  width: 47.82608%; /* 3 columns, 2 gutters */
+  margin-bottom: 20px;
+  background-color: yellow;
+  padding: 5px;
+  -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+     -moz-box-sizing: border-box; /* FF1+ */
+          box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+}
+#intro, #tagCloud {
+  float: left;
+  margin-right: 2.17391%;
+}
+#search, #twitter {
+  float: right;
+  margin-left: 2.17391%;
+}
+#search, #tagCloud {
+  text-align: center;
+}
+
+/*
+ * Footer
+ * -----------------------------------------------------------------------------
+ */
+#footer {
+  clear: both;
+  width: auto; /* 12 columns, 11 gutters */
+  margin: 0 1.04167%; /* Half a gutter */
+  padding: 5px;
+  text-align: center;
+  background-color: yellow;
+}
