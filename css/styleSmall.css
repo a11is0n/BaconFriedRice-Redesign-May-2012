@@ -6,7 +6,7 @@
  * Overall styling
  * -----------------------------------------------------------------------------
  */
-* {
+body {
   font-family: Arial, sans-serif;
   color: #000000;
 }
@@ -128,6 +128,8 @@
 .blogBody {
   width: auto;
   padding: 10px 0px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .blogFooter {
   padding-top: 10px;
@@ -143,8 +145,10 @@
 .sidebarItem {
   width: auto;
   margin: 20px 0px;
-  padding: 10px;
   background-color: yellow;
+}
+.sidebarItem .pad {
+  padding: 10px;
 }
 #search, #tagCloud {
   text-align: center;
