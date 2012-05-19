@@ -46,6 +46,8 @@ body {
   margin-bottom: 20px;
   background-color: yellow;
   text-align: center;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .nav ul {
   display: inline-block;
@@ -53,7 +55,6 @@ body {
 .nav li {
   display: inline-block;
   padding: 5px;
-  font-size: 1em;
 }
 .nav #navSearch {
   display: none;
@@ -98,6 +99,7 @@ body {
 }
 .blogTitle {
   font-size: 1.5em;
+  line-height: 2em;
 }
 .blogCategories li, .blogComments, .blogTags li {
   width: auto;
@@ -174,6 +176,7 @@ body {
 }
 .blogBody {
   width: auto;
+  margin-left: 110px; /* 100px info blocks plus 10px margin */
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -190,6 +193,8 @@ body {
   width: 47.91666%; /* 6 columns, 5 gutters */
   margin: 0 1.04167%; /* Half a gutter */
   float: right;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .sidebarItem {
   width: 47.82608%; /* 3 columns, 2 gutters */
@@ -226,7 +231,7 @@ body {
 #footer {
   clear: both;
   width: auto; /* 12 columns, 11 gutters */
-  margin: 0 1.04167%; /* Half a gutter */
+  margin: 20px 1.04167%; /* Half a gutter */
   padding: 5px;
   text-align: center;
   background-color: yellow;

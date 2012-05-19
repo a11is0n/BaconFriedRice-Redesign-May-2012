@@ -14,6 +14,16 @@
  */
  
 /*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * Begin first layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+/*
  * Overall styling
  * -----------------------------------------------------------------------------
  */
@@ -21,49 +31,47 @@ body {
   font-family: Arial, sans-serif;
   color: #000000;
 }
- 
+
 /*
  * Wrapper around all the content
  * -----------------------------------------------------------------------------
  */ 
 #wrapper {
-  width: 95%;
-  margin: 0px auto;
+  width: 100%;
 }
 
 /*
  * Header, which includes the top banner and navigation
  * -----------------------------------------------------------------------------
- */ 
+ */
 #header {
-  width: 97.91666%; /* 12 columns, 11 gutters */
-  margin: 0 1.04167%; /* Half a gutter */
+  width: auto;
 }
 #banner {
   width: auto;
-  margin: 20px 0px;
   background-color: yellow;
   text-align: center;
 }
 #title {
   font-size: 4em;
 }
-#nav {
+#normalTitle {
+  display: none;
+}
+.nav {
   width: auto;
-  margin: 20px 0px;
   background-color: yellow;
   text-align: center;
+  border-top: 1px solid orange;
+  font-size: 1em;
+  line-height: 1.5em;
 }
-#nav ul {
+.nav ul {
   display: inline-block;
 }
-#nav li{
+.nav li{
   display: inline-block;
   padding: 5px;
-  font-size: 1em;
-}
-#nav #navSearch {
-  display: none;
 }
 
 /*
@@ -79,10 +87,9 @@ body {
  * -----------------------------------------------------------------------------
  */
 #content {
-  width: 64.58333%; /* 8 columns, 7 gutters */
-  margin: 0 1.04167%; /* Half a gutter */
-  margin-bottom: 20px;
-  float: left;
+  width: auto;
+  margin-top: 20px;
+  padding: 10px;
   background-color: yellow;
 }
 
@@ -92,21 +99,19 @@ body {
  */
 .blog {
   width: auto;
-  margin: 10px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid orange;
 }
 .blogHeader, .blogFooter {
-  margin-left: 110px; /* 100px info blocks plus 10px margin */
-}
-.blogHeader {
-  padding-bottom: 20px;
+  width: auto;
+  
 }
 .blogTitle {
   font-size: 1.5em;
+  line-height: 2em;
 }
-.blogCategories li, .blogComments, .blogTags li {
+.blogCategories li, .blogComments, .blogAuthor, .blogDate, .blogTags li {
   width: auto;
   height: 16px;
   margin: 5px 0px;
@@ -132,81 +137,59 @@ body {
   width: auto;
 }
 .blogInfo {
-  width: 100px;
-  margin-right: 10px;
-  float: left;
+  width: auto;
 }
 .blogAuthor, .blogDate {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  position: relative;
-}
-.blogAuthor {
-  background: url('http://placehold.it/100x100') no-repeat center center;
-  font-size: 20px;
-}
-.blogAuthorName {
-  width: 100px;
-  height: 16px;
-  margin: 5px 0px;
-  font-size: 16px;
-  position: absolute;
-  bottom: 0px;
+  display: block;
+  margin: 10px 0px;
+  padding-right: 0px; /* No need for right padding since there is only one */
+  background: url('http://placehold.it/16x16') no-repeat top left;
 }
 .blogDate {
-  margin-top: 10px;
-  background-color: orange;
+  background: url('http://placehold.it/16x16') no-repeat top left;
 }
-.blogMonth {
-  width: 100px;
-  height: 16px;
-  margin: 5px 0px;
-  font-size: 16px;
-  position: absolute;
-  top: 0px;
-}
-.blogDay {
-  height: 100px;
-  line-height: 100px;
-  font-size: 50px;
-}
-.blogYear {
-  width: 100px;
-  height: 16px;
-  margin: 5px 0px;
-  font-size: 16px;
-  position: absolute;
-  bottom: 0px;
+.blogMonth, .blogDay, .blogYear {
+  display: inline;
 }
 .blogBody {
   width: auto;
+  padding: 10px 0px;
   font-size: 1em;
   line-height: 1.5em;
 }
 .blogFooter {
-  padding-top: 20px;
-  clear: both;
+  padding-top: 10px;
 }
-
 
 /*
  * Side bar in middle section
  * -----------------------------------------------------------------------------
  */
 #sidebar {
-  width: 31.25%;
-  margin: 0 1.04167%;
-  margin-bottom: 20px;
-  float: right;
+  width: auto;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .sidebarItem {
   width: auto;
+  margin: 20px 0px;
   background-color: yellow;
-  margin-bottom: 20px;
+}
+.sidebarItem .pad {
   padding: 10px;
 }
 #search, #tagCloud {
+  text-align: center;
+}
+#intro, #tagCloud, #twitter {
+  display: none;
+}
+#searchBar {
+  width: 75%;
+  height: 1.5em;
+  padding: 0px;
+  font-size: 1em;
+  line-height: 1em;
   text-align: center;
 }
 
@@ -215,10 +198,260 @@ body {
  * -----------------------------------------------------------------------------
  */
 #footer {
-  clear: both;
-  width: 97.91666%;
-  margin: 20px 1.04167%;
+  width: auto;
   padding: 5px;
   text-align: center;
   background-color: yellow;
 }
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * End first layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * Begin second layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+@media screen and (min-width: 600px) {
+
+  /*
+   * Wrapper around all the content
+   * ---------------------------------------------------------------------------
+   */ 
+  #wrapper {
+    width: 95%;
+    margin: 0px auto;
+  }
+  
+  /*
+   * Header, which includes the top banner and navigation
+   * ---------------------------------------------------------------------------
+   */
+  #header {
+    width: 97.91666%; /* 12 columns, 11 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+  }
+  #banner {
+    margin: 20px 0px;
+  }
+  #smallTitle {
+    display: none;
+  }
+  #normalTitle {
+    display: block;
+  }
+  .nav {
+    margin: 20px 0px;
+    border: none;
+  }
+  .nav #navSearch {
+    display: none;
+  }
+  
+  /*
+   * Main content area in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #content {
+    width: 64.58333%; /* 8 columns, 7 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+    margin-bottom: 20px;
+    padding: 0px;
+    float: left;
+  }
+  
+  /*
+   * Blog styling
+   * ---------------------------------------------------------------------------
+   */
+  .blog {
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  .blogHeader, .blogFooter {
+    margin-left: 110px; /* 100px info blocks plus 10px margin */
+  }
+  .blogHeader {
+    padding-bottom: 20px;
+  }
+  .blogInfo {
+    width: 100px;
+    margin-right: 10px;
+    float: left;
+  }
+  .blogAuthor, .blogDate {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    text-align: center;
+    position: relative;
+    background: none;
+  }
+  .blogAuthor {
+    background: url('http://placehold.it/100x100') no-repeat center center;
+    font-size: 20px;
+  }
+  .blogAuthorName {
+    width: 100px;
+    height: 16px;
+    margin: 5px 0px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .blogDate {
+    margin-top: 10px;
+    background-color: orange;
+  }
+  .blogMonth, .blogDay, .blogYear {
+    display: block;
+  }
+  .blogMonth {
+    width: 100px;
+    height: 16px;
+    margin: 5px 0px;
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+  }
+  .blogDay {
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+  }
+  .blogYear {
+    width: 100px;
+    height: 16px;
+    margin: 5px 0px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .blogBody {
+    margin-left: 110px; /* 100px info blocks plus 10px margin */
+    padding: 0px;
+  }
+  .blogFooter {
+    padding-top: 20px;
+    clear: both;
+  }
+  
+  /*
+   * Side bar in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #sidebar {
+    width: 31.25%;
+    margin: 0 1.04167%;
+    margin-bottom: 20px;
+    float: right;
+  }
+  .sidebarItem {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  #intro, #tagCloud, #twitter {
+    display: block;
+  }
+  
+  /*
+   * Footer
+   * ---------------------------------------------------------------------------
+   */
+  #footer {
+    clear: both;
+    margin: 20px 1.04167%;
+  }
+  
+}
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * End second layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * Begin third layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+@media screen and (min-width: 1280px) {
+
+  /*
+   * Header, which includes the top banner and navigation
+   * ---------------------------------------------------------------------------
+   */ 
+  #header {
+    width: 47.91666%; /* 6 columns, 5 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+    float: right;
+  }
+  .nav {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  
+  /*
+   * Main content area in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #content {
+    width: 47.91666%; /* 6 columns, 5 gutters */
+    margin: 20px 1.04167%; /* Half a gutter */
+  }
+  
+  /*
+   * Side bar in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #sidebar {
+    width: 47.91666%; /* 6 columns, 5 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+  }
+  .sidebarItem {
+    width: 47.82608%; /* 3 columns, 2 gutters */
+  }
+  #intro, #tagCloud {
+    float: left;
+    margin-right: 2.17391%;
+  }
+  #search, #twitter {
+    float: right;
+    margin-left: 2.17391%;
+  }
+
+}
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * End third layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */

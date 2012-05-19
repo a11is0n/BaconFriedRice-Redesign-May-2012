@@ -41,12 +41,12 @@
     <link rel="stylesheet" href="css/html5reset-1.6.1.css" />
     
     <!-- Standalone stylesheets used during testing -->
-    <!--<link rel="stylesheet" href="css/styleSmall.css" />-->
-    <!--<link rel="stylesheet" href="css/styleNormal.css" />-->
-    <link rel="stylesheet" href="css/styleBig.css" />
-    
+    <!--<link rel="stylesheet" href="css/styleSmall.css" media="screen and (max-width: 600px)" />
+    <link rel="stylesheet" href="css/styleNormal.css" media="screen and (min-width: 600px) and (max-width: 1280px)"/>
+    <link rel="stylesheet" href="css/styleBig.css" media="screen and (min-width: 1280px)" />
+    -->
     <!-- Combined stylesheet with media queries -->
-    <!--<link rel="stylesheet" href="css/style.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
    
   </head>
  
@@ -72,7 +72,7 @@
        
         <nav class="nav" id="nav">
        
-          <ul>
+          <ul id="navList">
             <li id="navAbout">
               about
             </li>
@@ -94,7 +94,7 @@
         
         <nav class="nav" id="categories">
         
-          <ul>
+          <ul id="categoriesList">
             <li>
               books
             </li>
