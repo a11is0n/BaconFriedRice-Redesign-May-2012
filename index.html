@@ -40,12 +40,12 @@
     <!-- Use local HTML5 Doctor CSS Reset when developing locally -->
     <link rel="stylesheet" href="css/html5reset-1.6.1.css" />
     
-    <!-- Standalone stylesheets used during testing -->
+    <!-- Standalone stylesheets for layout structure used during testing -->
     <!--<link rel="stylesheet" href="css/styleSmall.css" media="screen and (max-width: 600px)" />
     <link rel="stylesheet" href="css/styleNormal.css" media="screen and (min-width: 600px) and (max-width: 1280px)"/>
     <link rel="stylesheet" href="css/styleBig.css" media="screen and (min-width: 1280px)" />
     -->
-    <!-- Combined stylesheet with media queries -->
+    <!-- Combined stylesheet with media queries and full styling -->
     <link rel="stylesheet" href="css/style.css" />
    
   </head>
@@ -56,65 +56,91 @@
    
       <!-- Header start -->
       <header id="header">
-     
-        <div id="banner">
+        
+        <a href="#">
+          <div id="banner" class="rounded">
+         
+            <h1 id="title" >
+              <div id="smallTitle">
+                BFR
+              </div>
+              <div id="normalTitle">
+                BaconFriedRice
+              </div>
+            </h1>
+         
+          </div>
+        </a>
        
-          <h1 id="title">
-            <div id="smallTitle">
-              BFR
-            </div>
-            <div id="normalTitle">
-              BaconFriedRice
-            </div>
-          </h1>
-       
-        </div>
-       
-        <nav class="nav" id="nav">
+        <nav class="nav rounded" id="nav">
        
           <ul id="navList">
             <li id="navAbout">
-              about
+              <a href="#">
+                about
+              </a>
             </li>
             <li id="navProjects">
-              projects
+              <a href="#">
+                projects
+              </a>
             </li>
             <li id="navArchives">
-              archives
+              <a href="#">
+                archives
+              </a>
             </li>
             <li id="navContact">
-              contact
+              <a href="#">
+                contact
+              </a>
             </li>
             <li id="navSearch">
-              search
+              <a href="#">
+                search
+              </a>
             </li>
           </ul>
        
         </nav>
         
-        <nav class="nav" id="categories">
+        <nav class="nav rounded" id="categories">
         
           <ul id="categoriesList">
             <li>
-              books
+              <a href="#">
+                books
+              </a>
             </li>
             <li>
-              bacon
+              <a href="#">
+                bacon
+              </a>
             </li>
             <li>
-              blah
+              <a href="#">
+                blach
+              </a>
             </li>
             <li>
-              cats
+              <a href="#">
+                cats
+              </a>
             </li>
             <li>
-              piggies
+              <a href="#">
+                piggies
+              </a>
             </li>
             <li>
-              pandas
+              <a href="#">
+                pandas
+              </a>
             </li>
             <li>
-              games
+              <a href="#">
+                games
+              </a>
             </li>
             
         
@@ -127,7 +153,7 @@
       <div id="container">
         
         <!-- Main content start -->
-        <section id="content">
+        <section id="content" class="rounded">
        
           <!-- Blog start -->
           <article class="blog">
@@ -135,23 +161,33 @@
             <header class="blogHeader">
             
               <h1 class="blogTitle">
-                Blog title
+                <a href="#">
+                  Blog title
+                </a>
               </h1>
               
               <ul class="blogCategories">
                 <li>
-                  Bacon
+                  <a href="#">
+                    Bacon
+                  </a>
                 </li>
                 <li>
-                  Cats
+                  <a href="#">
+                    Cats
+                  </a>
                 </li>
                 <li>
-                  Random
+                  <a href="#">
+                    Random
+                  </a>
                 </li>
               </ul>
               
               <div class="blogComments">
-                0 comments
+                <a href="#">
+                  0 comments
+                </a>
               </div>
            
             </header>
@@ -160,23 +196,27 @@
            
               <div class="blogInfo">
               
-                <div class="blogAuthor">
-                  <div class="blogAuthorName">
-                    Author
+                <a href="#">
+                  <div class="blogAuthor rounded">
+                    <div class="blogAuthorName">
+                      Author
+                    </div>
                   </div>
-                </div>
+                </a>
                 
-                <div class="blogDate">
-                  <div class="blogMonth">
-                    May
+                <a href="#">
+                  <div class="blogDate rounded">
+                    <div class="blogMonth">
+                      May
+                    </div>
+                    <div class="blogDay">
+                      11
+                    </div>
+                    <div class="blogYear">
+                      2012
+                    </div>
                   </div>
-                  <div class="blogDay">
-                    11
-                  </div>
-                  <div class="blogYear">
-                    2012
-                  </div>
-                </div>
+                </a>
                
               </div>
              
@@ -192,18 +232,26 @@
             
               <ul class="blogTags">
                 <li>
-                  tag
+                  <a href="#">
+                    tag
+                  </a>
                 </li>
                 <li>
-                  tag 2
+                  <a href="#">
+                    tag 2
+                  </a>
                 </li>
                 <li>
-                  tag tag
+                  <a href="#">
+                    tag tag
+                  </a>
                 </li>
               </ul>
               
               <div class="blogComments">
-                0 comments
+                <a href="#">
+                  0 comments
+                </a>
               </div>
             
             </footer>
@@ -217,23 +265,33 @@
             <header class="blogHeader">
             
               <h1 class="blogTitle">
-                Blog title
+                <a href="#">
+                  Blog title
+                </a>
               </h1>
               
               <ul class="blogCategories">
                 <li>
-                  Bacon
+                  <a href="#">
+                    Bacon
+                  </a>
                 </li>
                 <li>
-                  Cats
+                  <a href="#">
+                    Cats
+                  </a>
                 </li>
                 <li>
-                  Random
+                  <a href="#">
+                    Random
+                  </a>
                 </li>
               </ul>
               
               <div class="blogComments">
-                0 comments
+                <a href="#">
+                  0 comments
+                </a>
               </div>
            
             </header>
@@ -242,23 +300,27 @@
            
               <div class="blogInfo">
               
-                <div class="blogAuthor">
-                  <div class="blogAuthorName">
-                    Author
+                <a href="#">
+                  <div class="blogAuthor rounded">
+                    <div class="blogAuthorName">
+                      Author
+                    </div>
                   </div>
-                </div>
+                </a>
                 
-                <div class="blogDate">
-                  <div class="blogMonth">
-                    May
+                <a href="#">
+                  <div class="blogDate rounded">
+                    <div class="blogMonth">
+                      May
+                    </div>
+                    <div class="blogDay">
+                      11
+                    </div>
+                    <div class="blogYear">
+                      2012
+                    </div>
                   </div>
-                  <div class="blogDay">
-                    11
-                  </div>
-                  <div class="blogYear">
-                    2012
-                  </div>
-                </div>
+                </a>
                
               </div>
              
@@ -274,18 +336,26 @@
             
               <ul class="blogTags">
                 <li>
-                  tag
+                  <a href="#">
+                    tag
+                  </a>
                 </li>
                 <li>
-                  tag 2
+                  <a href="#">
+                    tag 2
+                  </a>
                 </li>
                 <li>
-                  tag tag
+                  <a href="#">
+                    tag tag
+                  </a>
                 </li>
               </ul>
               
               <div class="blogComments">
-                0 comments
+                <a href="#">
+                  0 comments
+                </a>
               </div>
             
             </footer>
@@ -299,23 +369,33 @@
             <header class="blogHeader">
             
               <h1 class="blogTitle">
-                Blog title
+                <a href="#">
+                  Blog title
+                </a>
               </h1>
               
               <ul class="blogCategories">
                 <li>
-                  Bacon
+                  <a href="#">
+                    Bacon
+                  </a>
                 </li>
                 <li>
-                  Cats
+                  <a href="#">
+                    Cats
+                  </a>
                 </li>
                 <li>
-                  Random
+                  <a href="#">
+                    Random
+                  </a>
                 </li>
               </ul>
               
               <div class="blogComments">
-                0 comments
+                <a href="#">
+                  0 comments
+                </a>
               </div>
            
             </header>
@@ -324,23 +404,27 @@
            
               <div class="blogInfo">
               
-                <div class="blogAuthor">
-                  <div class="blogAuthorName">
-                    Author
+                <a href="#">
+                  <div class="blogAuthor rounded">
+                    <div class="blogAuthorName">
+                      Author
+                    </div>
                   </div>
-                </div>
+                </a>
                 
-                <div class="blogDate">
-                  <div class="blogMonth">
-                    May
+                <a href="#">
+                  <div class="blogDate rounded">
+                    <div class="blogMonth">
+                      May
+                    </div>
+                    <div class="blogDay">
+                      11
+                    </div>
+                    <div class="blogYear">
+                      2012
+                    </div>
                   </div>
-                  <div class="blogDay">
-                    11
-                  </div>
-                  <div class="blogYear">
-                    2012
-                  </div>
-                </div>
+                </a>
                
               </div>
              
@@ -356,18 +440,26 @@
             
               <ul class="blogTags">
                 <li>
-                  tag
+                  <a href="#">
+                    tag
+                  </a>
                 </li>
                 <li>
-                  tag 2
+                  <a href="#">
+                    tag 2
+                  </a>
                 </li>
                 <li>
-                  tag tag
+                  <a href="#">
+                    tag tag
+                  </a>
                 </li>
               </ul>
               
               <div class="blogComments">
-                0 comments
+                <a href="#">
+                  0 comments
+                </a>
               </div>
             
             </footer>
@@ -382,7 +474,7 @@
         <aside id="sidebar">
         
           <!-- Intro start -->
-          <div id="intro" class="sidebarItem">
+          <div id="intro" class="sidebarItem rounded">
             <div class="pad">
               Welcome, blah blah blah
             </div>
@@ -390,15 +482,18 @@
           <!-- Intro end -->
           
           <!-- Search start -->
-          <div id="search" class="sidebarItem">
+          <div id="search" class="sidebarItem rounded">
             <div class="pad">
-              <input type="search" id="searchBar" placeholder="search here" />
+              <div id="searchBundle">
+                <input type="search" id="searchBar" placeholder="search" />
+                <input type="button" id="searchButton" value="" title="search" />
+              </div>
             </div>
           </div>
           <!-- Search end -->
           
           <!-- Tag cloud start -->
-          <div id="tagCloud" class="sidebarItem">
+          <div id="tagCloud" class="sidebarItem rounded">
             <div class="pad">
               Blah blah blah
             </div>
@@ -406,7 +501,7 @@
           <!-- Tag cloud end -->
           
           <!-- Twitter start -->
-          <div id="twitter" class="sidebarItem">
+          <div id="twitter" class="sidebarItem rounded">
             <div class="pad">
               @a11is0n said blah
             </div>
@@ -419,9 +514,11 @@
       </div>
       <!-- Middle section end -->
      
-      <footer id="footer">
+      <footer id="footer" class="rounded">
      
-        Powered by Wordpress
+        <a href="http://www.wordpress.org" target="_blank">
+          Powered by Wordpress
+        </a>
      
       </footer>
    

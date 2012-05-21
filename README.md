@@ -12,10 +12,10 @@ than using media queries.  Since it is mobile-first, browsers not supporting
 media queries will just show the mobile layout.
 * Style it, again using no CSS3 or HTML5.  At this point, I have a passable site
 that does not depend on browsers' CSS3, HTML5, or JavaScript abilities.
+* Add any new HTML5 elements that might be useful.  Browsers that support
+these get a better site.
 * Add more styling, allowing myself to use CSS3.  Browsers that support these
 get a prettier site!
-* Add any new HTML5 elements that might be useful.  Again, browsers that support
-these get a better site.
 * Allow myself to use JavaScript to add cool features and effects.  Since I am
 doing this last just to add frosting, the site's basic functionality does not
 rely on JavaScript, so people who don't enable JavaScript (who does that???)
@@ -41,3 +41,7 @@ Guide")
 * [The Current State of HTML5 Forms](http://wufoo.com/html5/ "The Current State
 of HTML5 Forms")
 * [HTML5Pattern](http://html5pattern.com/ "HTML5Pattern")
+* [Equal height inputs and 
+buttons](http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari
+"Equal height inputs and buttons")
+* [CSS3 Please](http://css3please.com/ "CSS3 Please")

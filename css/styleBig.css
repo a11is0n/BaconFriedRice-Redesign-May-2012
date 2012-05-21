@@ -215,13 +215,28 @@ body {
 #search, #tagCloud {
   text-align: center;
 }
+#searchBundle {
+  margin: 0px auto;
+}
 #searchBar {
-  width: 75%;
+  width: 60%;
   height: 1.5em;
+  min-height: 16px; /* Set min-height to match search button */
+  margin: 0px;
+  padding: 0px 4px;
+  font-size: 1em;
+  line-height: 1em;
+}
+#searchButton {
+  width: 15%;
+  height: 1.5em;
+  min-height: 16px; /* Set min-height because image in background is 16px */
+  margin: 0px;
   padding: 0px;
   font-size: 1em;
   line-height: 1em;
-  text-align: center;
+  border: 1px solid black;
+  background: url('http://placehold.it/16x16') no-repeat center center;
 }
 
 /*

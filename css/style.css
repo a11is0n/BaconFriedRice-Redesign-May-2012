@@ -14,6 +14,15 @@
  */
  
 /*
+ * Colors
+ * - #000000
+ * - #353535
+ * - #828282
+ * - #ffffff
+ * - #794497
+ */
+ 
+/*
  * -----------------------------------------------------------------------------
  * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
  * -----------------------------------------------------------------------------
@@ -29,7 +38,21 @@
  */
 body {
   font-family: Arial, sans-serif;
-  color: #000000;
+  background-color: #000000;
+  color: #828282;
+}
+a:link,
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #794497;
+  text-decoration: none;
+}
+a:active {
+  color: #ffffff;
+  background-color: #794497;
 }
 
 /*
@@ -49,7 +72,8 @@ body {
 }
 #banner {
   width: auto;
-  background-color: yellow;
+  /*background-color: yellow;*/
+  background-color: #353535;
   text-align: center;
 }
 #title {
@@ -60,9 +84,10 @@ body {
 }
 .nav {
   width: auto;
-  background-color: yellow;
+  /*background-color: yellow;*/
+  background-color: #353535;
   text-align: center;
-  border-top: 1px solid orange;
+  border-top: 1px solid #794497;
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -90,7 +115,8 @@ body {
   width: auto;
   margin-top: 20px;
   padding: 10px;
-  background-color: yellow;
+  /*background-color: yellow;*/
+  background-color: #353535;
 }
 
 /*
@@ -101,9 +127,10 @@ body {
   width: auto;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid #794497;
 }
-.blogHeader, .blogFooter {
+.blogHeader,
+.blogFooter {
   width: auto;
   
 }
@@ -111,7 +138,11 @@ body {
   font-size: 1.5em;
   line-height: 2em;
 }
-.blogCategories li, .blogComments, .blogAuthor, .blogDate, .blogTags li {
+.blogCategories li,
+.blogComments,
+.blogAuthor,
+.blogDate,
+.blogTags li {
   width: auto;
   height: 16px;
   margin: 5px 0px;
@@ -139,16 +170,20 @@ body {
 .blogInfo {
   width: auto;
 }
-.blogAuthor, .blogDate {
-  display: block;
-  margin: 10px 0px;
-  padding-right: 0px; /* No need for right padding since there is only one */
+.blogAuthor,
+.blogDate {
+  display: inline-block;
+  margin: 5px 0px 10px 0px;
+}
+.blogAuthor {
   background: url('http://placehold.it/16x16') no-repeat top left;
 }
 .blogDate {
   background: url('http://placehold.it/16x16') no-repeat top left;
 }
-.blogMonth, .blogDay, .blogYear {
+.blogMonth,
+.blogDay,
+.blogYear {
   display: inline;
 }
 .blogBody {
@@ -173,24 +208,43 @@ body {
 .sidebarItem {
   width: auto;
   margin: 20px 0px;
-  background-color: yellow;
+  /*background-color: yellow;*/
+  background-color: #353535;
 }
 .sidebarItem .pad {
   padding: 10px;
 }
-#search, #tagCloud {
+#search,
+#tagCloud {
   text-align: center;
 }
-#intro, #tagCloud, #twitter {
+#intro,
+#tagCloud,
+#twitter {
   display: none;
 }
+#searchBundle {
+  margin: 0px auto;
+}
 #searchBar {
-  width: 75%;
+  width: 60%;
   height: 1.5em;
+  min-height: 16px; /* Set min-height to match search button */
+  margin: 0px;
+  padding: 0px 4px;
+  font-size: 1em;
+  line-height: 1em;
+}
+#searchButton {
+  width: 15%;
+  height: 1.5em;
+  min-height: 16px; /* Set min-height because image in background is 16px */
+  margin: 0px;
   padding: 0px;
   font-size: 1em;
   line-height: 1em;
-  text-align: center;
+  border: 1px solid black;
+  background: url('http://placehold.it/16x16') no-repeat center center;
 }
 
 /*
@@ -201,7 +255,8 @@ body {
   width: auto;
   padding: 5px;
   text-align: center;
-  background-color: yellow;
+  /*background-color: yellow;*/
+  background-color: #353535;
 }
  
 /*
@@ -225,6 +280,17 @@ body {
  */
  
 @media screen and (min-width: 600px) {
+
+  /*
+   * Rounded corners
+   */
+  .rounded {
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+       -moz-background-clip: padding;
+    -webkit-background-clip: padding-box; 
+            background-clip: padding-box;
+  }
 
   /*
    * Wrapper around all the content
@@ -280,7 +346,8 @@ body {
     margin: 10px;
     margin-bottom: 20px;
   }
-  .blogHeader, .blogFooter {
+  .blogHeader,
+  .blogFooter {
     margin-left: 110px; /* 100px info blocks plus 10px margin */
   }
   .blogHeader {
@@ -291,7 +358,12 @@ body {
     margin-right: 10px;
     float: left;
   }
-  .blogAuthor, .blogDate {
+  .blogInfo a:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+  .blogAuthor,
+  .blogDate {
     width: 100px;
     height: 100px;
     margin: 0px;
@@ -299,7 +371,8 @@ body {
     font-size: 1em;
     text-align: center;
     position: relative;
-    background: none;
+    background: none; /* Remove previous background image */
+    background-color: #794497; 
   }
   .blogAuthor {
     background: url('http://placehold.it/100x100') no-repeat center center;
@@ -315,9 +388,10 @@ body {
   }
   .blogDate {
     margin-top: 10px;
-    background-color: orange;
   }
-  .blogMonth, .blogDay, .blogYear {
+  .blogMonth,
+  .blogDay,
+  .blogYear {
     display: block;
   }
   .blogMonth {
@@ -364,7 +438,9 @@ body {
     margin: 0px;
     margin-bottom: 20px;
   }
-  #intro, #tagCloud, #twitter {
+  #intro,
+  #tagCloud,
+  #twitter {
     display: block;
   }
   
@@ -435,11 +511,13 @@ body {
   .sidebarItem {
     width: 47.82608%; /* 3 columns, 2 gutters */
   }
-  #intro, #tagCloud {
+  #intro,
+  #tagCloud {
     float: left;
     margin-right: 2.17391%;
   }
-  #search, #twitter {
+  #search,
+  #twitter {
     float: right;
     margin-left: 2.17391%;
   }

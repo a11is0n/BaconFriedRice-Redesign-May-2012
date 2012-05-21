@@ -50,3 +50,28 @@ Placeholder Styling with CSS](http://davidwalsh.name/html5-placeholder-css
 Safari's placeholder text with the "::-webkit-input-placeholder" selector, but 
 unfortunately using "text-align: center" there did not center the placeholder 
 text either.  I guess I'll just have to leave it that way.
+
+05.20.2012
+----------
+
+I've decided not to center the text in my search box.  I also realized that I
+should add some sort of search button, instead of assuming the user will always
+just press "enter" to search.
+
+Now I've discovered a problem where even when I give both the search input and
+the button explicit heights that are the same, some browsers make them different
+heights, while others make them the same height but they are vertically
+aligned differently - none of them show it the way I expect!
+
+I found this article about [Equal height inputs and 
+buttons](http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari
+"Equal height inputs and buttons"), but it didn't seem to be the exact same
+problem.  I also didn't want to use a vendor-prefix as a fix.
+
+It turns out that if I use <input type="button" /> instead of <button>, the
+problem is gone!  I wonder why?
+
+Also, I am starting to add CSS3 styling, and [CSS3 Please](http://css3please.com/
+"CSS3 Please") is awesome.  It's so useful to have all the vendor prefixes
+gathered in one place... plus it's so handy that all the values in the different
+prefixes change when you edit just one of them!
