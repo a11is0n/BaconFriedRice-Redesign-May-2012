@@ -68,8 +68,8 @@ buttons](http://christophzillgens.com/en/articles/equal-height-input-and-button-
 "Equal height inputs and buttons"), but it didn't seem to be the exact same
 problem.  I also didn't want to use a vendor-prefix as a fix.
 
-It turns out that if I use <input type="button" /> instead of <button>, the
-problem is gone!  I wonder why?
+It turns out that if I use an input of type "button" instead of a button 
+element, the problem is gone!  I wonder why?
 
 Also, I am starting to add CSS3 styling, and [CSS3 Please](http://css3please.com/
 "CSS3 Please") is awesome.  It's so useful to have all the vendor prefixes
