@@ -75,3 +75,24 @@ Also, I am starting to add CSS3 styling, and [CSS3 Please](http://css3please.com
 "CSS3 Please") is awesome.  It's so useful to have all the vendor prefixes
 gathered in one place... plus it's so handy that all the values in the different
 prefixes change when you edit just one of them!
+
+05.22.2012
+----------
+
+Decided to change the search bar style again, so that the search input box and
+the submit button are within a surrounding box.  However, "background-color: 
+transparent" doesn't work on input boxes in Chrome or Safari!  Why???
+
+I found this Stack Overflow question: [HTML5 Search Input: No Background Image
+in Chrome?](http://stackoverflow.com/questions/2992215/html5-search-input-no-background-image-in-chrome
+"HTML5 Search Input: No Background Image in Chrome?") It turns out that WebKit
+supports the "search" input type (hence the "x" to clear the box), but it has
+its own styling for it that is not accessible yet.  The other browsers don't
+seem to support the "search" input type, so it styles them normally as "text"
+input types.
+
+The solution in the answers is to use "-webkit-appearance: none".  Works for me!
+
+Also found [WebKit HTML5 Search 
+Inputs](http://css-tricks.com/webkit-html5-search-inputs/ "WebKit HTML5 Search
+Inputs"), which seems like it might be helpful later on.

@@ -45,3 +45,8 @@ of HTML5 Forms")
 buttons](http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari
 "Equal height inputs and buttons")
 * [CSS3 Please](http://css3please.com/ "CSS3 Please")
+* [HTML5 Search Input: No Background Image
+in Chrome?](http://stackoverflow.com/questions/2992215/html5-search-input-no-background-image-in-chrome
+"HTML5 Search Input: No Background Image in Chrome?")
+* [WebKit HTML5 Search Inputs](http://css-tricks.com/webkit-html5-search-inputs/
+"WebKit HTML5 Search Inputs")

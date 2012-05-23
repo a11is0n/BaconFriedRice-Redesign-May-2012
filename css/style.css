@@ -51,8 +51,8 @@ a:hover {
   text-decoration: none;
 }
 a:active {
-  color: #ffffff;
-  background-color: #794497;
+  color: #794497;
+  text-decoration: underline;
 }
 
 /*
@@ -224,20 +224,44 @@ a:active {
   display: none;
 }
 #searchBundle {
+  display: inline-block;
   margin: 0px auto;
+  background-color: #ffffff;
+  padding: 5px;
 }
 #searchBar {
-  width: 60%;
+  width: 75%;
   height: 1.5em;
   min-height: 16px; /* Set min-height to match search button */
   margin: 0px;
   padding: 0px 4px;
   font-size: 1em;
   line-height: 1em;
+  border: none;
+  background: transparent;
+     -moz-appearance:none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  color: #000000;
+  
+}
+/* Two prefixed placeholder rules so they're not both ignored in browsers */
+#searchBar:-moz-placeholder { /* Pseudo-class */
+  color: #353535;
+  font-style: italic;
+}
+#searchBar::-webkit-input-placeholder { /* Pseudo-element */
+  color: #353535;
+  font-style: italic;
+}
+#searchBar:focus {
+  color: #794497;
+  outline: none;
 }
 #searchButton {
-  width: 15%;
+  width: 1.5em;
   height: 1.5em;
+  min-width: 16px;
   min-height: 16px; /* Set min-height because image in background is 16px */
   margin: 0px;
   padding: 0px;
@@ -361,6 +385,10 @@ a:active {
   .blogInfo a:hover {
     color: #000000;
     text-decoration: none;
+  }
+  .blogInfo a:active {
+    color: #000000;
+    text-decoration: underline;
   }
   .blogAuthor,
   .blogDate {
