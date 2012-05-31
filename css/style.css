@@ -51,8 +51,7 @@ a:hover {
   text-decoration: none;
 }
 a:active {
-  color: #794497;
-  text-decoration: underline;
+  color: #000000;
 }
 
 /*
@@ -153,16 +152,28 @@ a:active {
 }
 .blogCategories li {
   list-style: none;
-  background: url('http://placehold.it/16x16') no-repeat top left;
+  background: url('../images/icons.png') no-repeat 0px -32px;
+}
+.blogCategories li:hover,
+.blogCategories li:active {
+  background: url('../images/icons.png') no-repeat 0px -48px;
 }
 .blogComments {
-  display: block;
+  display: inline-block;
   padding-right: 0px; /* No need for right padding since there is only one */
-  background: url('http://placehold.it/16x16') no-repeat top left;
+  background: url('../images/icons.png') no-repeat 0px -64px;
+}
+.blogComments:hover,
+.blogComments:active {
+  background: url('../images/icons.png') no-repeat 0px -80px;
 }
 .blogTags li {
   list-style: none;
-  background: url('http://placehold.it/16x16') no-repeat top left;
+  background: url('../images/icons.png') no-repeat 0px -128px;
+}
+.blogTags li:hover,
+.blogTags li:active {
+  background: url('../images/icons.png') no-repeat 0px -144px;
 }
 .blogContent {
   width: auto;
@@ -176,10 +187,18 @@ a:active {
   margin: 5px 0px 10px 0px;
 }
 .blogAuthor {
-  background: url('http://placehold.it/16x16') no-repeat top left;
+  background: url('../images/icons.png') no-repeat 0px 0px;
+}
+.blogAuthor:hover,
+.blogAuthor:active {
+  background: url('../images/icons.png') no-repeat 0px -16px;
 }
 .blogDate {
-  background: url('http://placehold.it/16x16') no-repeat top left;
+  background: url('../images/icons.png') no-repeat 0px -96px;
+}
+.blogDate:hover,
+.blogDate:active {
+  background: url('../images/icons.png') no-repeat 0px -112px;
 }
 .blogMonth,
 .blogDay,
@@ -267,8 +286,13 @@ a:active {
   padding: 0px;
   font-size: 1em;
   line-height: 1em;
-  border: 1px solid black;
-  background: url('http://placehold.it/16x16') no-repeat center center;
+  border: none;
+  background: url('../images/icon_search.png') no-repeat center center;
+  cursor: pointer;
+}
+#searchButton:hover,
+#searchButton:active {
+  background: url('../images/icon_search2.png') no-repeat center center;
 }
 
 /*
@@ -382,13 +406,10 @@ a:active {
     margin-right: 10px;
     float: left;
   }
-  .blogInfo a:hover {
+  .blogInfo a:hover,
+  .blogInfo a:active  {
     color: #000000;
     text-decoration: none;
-  }
-  .blogInfo a:active {
-    color: #000000;
-    text-decoration: underline;
   }
   .blogAuthor,
   .blogDate {
@@ -403,8 +424,21 @@ a:active {
     background-color: #794497; 
   }
   .blogAuthor {
-    background: url('http://placehold.it/100x100') no-repeat center center;
     font-size: 20px;
+  }
+  .blogAuthor.allison {
+    background: url('../images/authors.png') no-repeat 0px 0px;
+  }
+  .blogAuthor.allison:hover,
+  .blogAuthor.allison:active {
+    background: url('../images/authors.png') no-repeat 0px -100px;
+  }
+  .blogAuthor.jack {
+    background: url('../images/authors.png') no-repeat -100px 0px;
+  }
+  .blogAuthor.jack:hover,
+  .blogAuthor.jack:active {
+    background: url('../images/authors.png') no-repeat -100px -100px;
   }
   .blogAuthorName {
     width: 100px;
@@ -416,6 +450,10 @@ a:active {
   }
   .blogDate {
     margin-top: 10px;
+  }
+  .blogDate:hover,
+  .blogDate:active {
+    background: #794497; 
   }
   .blogMonth,
   .blogDay,
@@ -470,6 +508,13 @@ a:active {
   #tagCloud,
   #twitter {
     display: block;
+  }
+  #searchBundle.rounded {
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+       -moz-background-clip: padding;
+    -webkit-background-clip: padding-box; 
+            background-clip: padding-box;
   }
   
   /*

@@ -96,3 +96,30 @@ The solution in the answers is to use "-webkit-appearance: none".  Works for me!
 Also found [WebKit HTML5 Search 
 Inputs](http://css-tricks.com/webkit-html5-search-inputs/ "WebKit HTML5 Search
 Inputs"), which seems like it might be helpful later on.
+
+05.30.2012
+----------
+
+Finally finished all the little 16x16 icons today.  Also did the images for
+the author blocks, which are just the first letter of the first name for now.
+
+I wanted to do a sprite sheet for all of them, but it was a little interesting
+because I was using all of the 16x16 icons (except for the search icon) as
+backgrounds in divs that are always 16px high, but variable width.  At first I
+had wanted to do a horizontal sheet with the first row being the normal icons
+and the second row being hover states, but ended up just doing a vertical line
+of all of the icons, so that unrelated images to the sides wouldn't show.
+
+I left the search icons as two separate images, because the width and height
+of that button is based on em, not px, so I wouldn't know a definite amount of
+empty space to leave around them if they were in a sprite sheet.
+
+Wish there was a way to only use a certain area of an image for a background!
+I found the CSS "clip" property for image elements, but wasn't able to find a
+way to use it in background images.
+
+I did a separate sheet for the author blocks, which was more straight-forward
+since they are always 100x100.  I uses the [Whitehall 
+font](http://www.fontsquirrel.com/fonts/whitehall "Whitehall font") for those.
+
+Also made a little favicon!
