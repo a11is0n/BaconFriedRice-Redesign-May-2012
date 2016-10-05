@@ -41,6 +41,12 @@ body {
   background-color: #000000;
   color: #828282;
 }
+a {
+  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
+}
 a:link,
 a:visited {
   color: #ffffff;
@@ -49,6 +55,10 @@ a:visited {
 a:hover {
   color: #794497;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
 }
 a:active {
   color: #000000;
@@ -133,10 +143,28 @@ a:active {
   width: auto;
   
 }
+.blogHeader > a,
+.blogHeader > a:hover,
+.blogCategories a,
+.blogCategories a:hover,
+.blogFooter > a,
+.blogFooter > a:hover,
+.blogTags a,
+.blogTags a:hover {
+  -webkit-transition: none;  /* Saf3.2+, Chrome */
+     -moz-transition: none;  /* FF4+ */
+       -o-transition: none;  /* Opera 10.5+ */
+          transition: none;
+}
 .blogTitle {
   font-size: 1.5em;
   line-height: 2em;
 }
+.blogCategories,
+.blogTags {
+  display: block;
+}
+
 .blogCategories li,
 .blogComments,
 .blogAuthor,
@@ -306,7 +334,7 @@ a:active {
   /*background-color: yellow;*/
   background-color: #353535;
 }
- 
+
 /*
  * -----------------------------------------------------------------------------
  * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -410,6 +438,13 @@ a:active {
   .blogInfo a:active  {
     color: #000000;
     text-decoration: none;
+  }
+  .blogInfo a,
+  .blogInfo a:hover {
+    -webkit-transition: none;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
   }
   .blogAuthor,
   .blogDate {
@@ -548,54 +583,7 @@ a:active {
  * -----------------------------------------------------------------------------
  */
  
-@media screen and (min-width: 1280px) {
 
-  /*
-   * Header, which includes the top banner and navigation
-   * ---------------------------------------------------------------------------
-   */ 
-  #header {
-    width: 47.91666%; /* 6 columns, 5 gutters */
-    margin: 0 1.04167%; /* Half a gutter */
-    float: right;
-  }
-  .nav {
-    margin: 0px;
-    margin-bottom: 20px;
-  }
-  
-  /*
-   * Main content area in middle section
-   * ---------------------------------------------------------------------------
-   */
-  #content {
-    width: 47.91666%; /* 6 columns, 5 gutters */
-    margin: 20px 1.04167%; /* Half a gutter */
-  }
-  
-  /*
-   * Side bar in middle section
-   * ---------------------------------------------------------------------------
-   */
-  #sidebar {
-    width: 47.91666%; /* 6 columns, 5 gutters */
-    margin: 0 1.04167%; /* Half a gutter */
-  }
-  .sidebarItem {
-    width: 47.82608%; /* 3 columns, 2 gutters */
-  }
-  #intro,
-  #tagCloud {
-    float: left;
-    margin-right: 2.17391%;
-  }
-  #search,
-  #twitter {
-    float: right;
-    margin-left: 2.17391%;
-  }
-
-}
  
 /*
  * -----------------------------------------------------------------------------

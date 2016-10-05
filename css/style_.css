@@ -1,0 +1,613 @@
+/*
+ * Attempted to do mobile-first design, first layout focused on phones
+ *
+ * Second layout based on the 960 grid system (http://960.gs/)
+ * - At 960px wide, there are 12 columns
+ * - The 12 columns are 60px each (6.25%)
+ * - Gutters are 20px each (2.08333%)
+ * - There are 10px margins on either side (1.04167%)
+ *
+ * Third layout is also based on 960 grid system
+ * - See above
+ *
+ *  Written with help from CSS3 Please! (http://css3please.com/)
+ */
+ 
+/*
+ * Colors
+ * - #000000
+ * - #353535
+ * - #828282
+ * - #ffffff
+ * - #794497
+ */
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * Begin first layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+/*
+ * Overall styling
+ * -----------------------------------------------------------------------------
+ */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #828282;
+}
+a:link,
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #794497;
+  text-decoration: none;
+}
+a:active {
+  color: #000000;
+}
+
+/*
+ * Wrapper around all the content
+ * -----------------------------------------------------------------------------
+ */ 
+#wrapper {
+  width: 100%;
+}
+
+/*
+ * Header, which includes the top banner and navigation
+ * -----------------------------------------------------------------------------
+ */
+#header {
+  width: auto;
+}
+#banner {
+  width: auto;
+  /*background-color: yellow;*/
+  background-color: #353535;
+  text-align: center;
+}
+#title {
+  font-size: 4em;
+}
+#normalTitle {
+  display: none;
+}
+.nav {
+  width: auto;
+  /*background-color: yellow;*/
+  background-color: #353535;
+  text-align: center;
+  border-top: 1px solid #794497;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.nav ul {
+  display: inline-block;
+}
+.nav li{
+  display: inline-block;
+  padding: 5px;
+}
+
+/*
+ * Wrapper around the middle section (between header and footer)
+ * -----------------------------------------------------------------------------
+ */
+#container {
+  font-size: 1em;
+}
+
+/*
+ * Main content area in middle section
+ * -----------------------------------------------------------------------------
+ */
+#content {
+  width: auto;
+  margin-top: 20px;
+  padding: 10px;
+  /*background-color: yellow;*/
+  background-color: #353535;
+}
+
+/*
+ * Blog styling
+ * -----------------------------------------------------------------------------
+ */
+.blog {
+  width: auto;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #794497;
+}
+.blogHeader,
+.blogFooter {
+  width: auto;
+  
+}
+.blogTitle {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+.blogCategories,
+.blogTags {
+  display: block;
+}
+
+.blogCategories li,
+.blogComments,
+.blogAuthor,
+.blogDate,
+.blogTags li {
+  width: auto;
+  height: 16px;
+  margin: 5px 0px;
+  font-size: 16px;
+  display: inline-block;
+  padding-left: 21px; /* 16px for image plus 5px padding */
+  padding-right: 5px;
+}
+.blogCategories li {
+  list-style: none;
+  background: url('../images/icons.png') no-repeat 0px -32px;
+}
+.blogCategories li:hover,
+.blogCategories li:active {
+  background: url('../images/icons.png') no-repeat 0px -48px;
+}
+.blogComments {
+  display: inline-block;
+  padding-right: 0px; /* No need for right padding since there is only one */
+  background: url('../images/icons.png') no-repeat 0px -64px;
+}
+.blogComments:hover,
+.blogComments:active {
+  background: url('../images/icons.png') no-repeat 0px -80px;
+}
+.blogTags li {
+  list-style: none;
+  background: url('../images/icons.png') no-repeat 0px -128px;
+}
+.blogTags li:hover,
+.blogTags li:active {
+  background: url('../images/icons.png') no-repeat 0px -144px;
+}
+.blogContent {
+  width: auto;
+}
+.blogInfo {
+  width: auto;
+}
+.blogAuthor,
+.blogDate {
+  display: inline-block;
+  margin: 5px 0px 10px 0px;
+}
+.blogAuthor {
+  background: url('../images/icons.png') no-repeat 0px 0px;
+}
+.blogAuthor:hover,
+.blogAuthor:active {
+  background: url('../images/icons.png') no-repeat 0px -16px;
+}
+.blogDate {
+  background: url('../images/icons.png') no-repeat 0px -96px;
+}
+.blogDate:hover,
+.blogDate:active {
+  background: url('../images/icons.png') no-repeat 0px -112px;
+}
+.blogMonth,
+.blogDay,
+.blogYear {
+  display: inline;
+}
+.blogBody {
+  width: auto;
+  padding: 10px 0px;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.blogFooter {
+  padding-top: 10px;
+}
+
+/*
+ * Side bar in middle section
+ * -----------------------------------------------------------------------------
+ */
+#sidebar {
+  width: auto;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.sidebarItem {
+  width: auto;
+  margin: 20px 0px;
+  /*background-color: yellow;*/
+  background-color: #353535;
+}
+.sidebarItem .pad {
+  padding: 10px;
+}
+#search,
+#tagCloud {
+  text-align: center;
+}
+#intro,
+#tagCloud,
+#twitter {
+  display: none;
+}
+#searchBundle {
+  display: inline-block;
+  margin: 0px auto;
+  background-color: #ffffff;
+  padding: 5px;
+}
+#searchBar {
+  width: 75%;
+  height: 1.5em;
+  min-height: 16px; /* Set min-height to match search button */
+  margin: 0px;
+  padding: 0px 4px;
+  font-size: 1em;
+  line-height: 1em;
+  border: none;
+  background: transparent;
+     -moz-appearance:none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  color: #000000;
+  
+}
+/* Two prefixed placeholder rules so they're not both ignored in browsers */
+#searchBar:-moz-placeholder { /* Pseudo-class */
+  color: #353535;
+  font-style: italic;
+}
+#searchBar::-webkit-input-placeholder { /* Pseudo-element */
+  color: #353535;
+  font-style: italic;
+}
+#searchBar:focus {
+  color: #794497;
+  outline: none;
+}
+#searchButton {
+  width: 1.5em;
+  height: 1.5em;
+  min-width: 16px;
+  min-height: 16px; /* Set min-height because image in background is 16px */
+  margin: 0px;
+  padding: 0px;
+  font-size: 1em;
+  line-height: 1em;
+  border: none;
+  background: url('../images/icon_search.png') no-repeat center center;
+  cursor: pointer;
+}
+#searchButton:hover,
+#searchButton:active {
+  background: url('../images/icon_search2.png') no-repeat center center;
+}
+
+/*
+ * Footer
+ * -----------------------------------------------------------------------------
+ */
+#footer {
+  width: auto;
+  padding: 5px;
+  text-align: center;
+  /*background-color: yellow;*/
+  background-color: #353535;
+}
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * End first layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * Begin second layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+@media screen and (min-width: 600px) {
+
+  /*
+   * Rounded corners
+   */
+  .rounded {
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+       -moz-background-clip: padding;
+    -webkit-background-clip: padding-box; 
+            background-clip: padding-box;
+  }
+
+  /*
+   * Wrapper around all the content
+   * ---------------------------------------------------------------------------
+   */ 
+  #wrapper {
+    width: 95%;
+    margin: 0px auto;
+  }
+  
+  /*
+   * Header, which includes the top banner and navigation
+   * ---------------------------------------------------------------------------
+   */
+  #header {
+    width: 97.91666%; /* 12 columns, 11 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+  }
+  #banner {
+    margin: 20px 0px;
+  }
+  #smallTitle {
+    display: none;
+  }
+  #normalTitle {
+    display: block;
+  }
+  .nav {
+    margin: 20px 0px;
+    border: none;
+  }
+  .nav #navSearch {
+    display: none;
+  }
+  
+  /*
+   * Main content area in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #content {
+    width: 64.58333%; /* 8 columns, 7 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+    margin-bottom: 20px;
+    padding: 0px;
+    float: left;
+  }
+  
+  /*
+   * Blog styling
+   * ---------------------------------------------------------------------------
+   */
+  .blog {
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  .blogHeader,
+  .blogFooter {
+    margin-left: 110px; /* 100px info blocks plus 10px margin */
+  }
+  .blogHeader {
+    padding-bottom: 20px;
+  }
+  .blogInfo {
+    width: 100px;
+    margin-right: 10px;
+    float: left;
+  }
+  .blogInfo a:hover,
+  .blogInfo a:active  {
+    color: #000000;
+    text-decoration: none;
+  }
+  .blogAuthor,
+  .blogDate {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    text-align: center;
+    position: relative;
+    background: none; /* Remove previous background image */
+    background-color: #794497; 
+  }
+  .blogAuthor {
+    font-size: 20px;
+  }
+  .blogAuthor.allison {
+    background: url('../images/authors.png') no-repeat 0px 0px;
+  }
+  .blogAuthor.allison:hover,
+  .blogAuthor.allison:active {
+    background: url('../images/authors.png') no-repeat 0px -100px;
+  }
+  .blogAuthor.jack {
+    background: url('../images/authors.png') no-repeat -100px 0px;
+  }
+  .blogAuthor.jack:hover,
+  .blogAuthor.jack:active {
+    background: url('../images/authors.png') no-repeat -100px -100px;
+  }
+  .blogAuthorName {
+    width: 100px;
+    height: 16px;
+    margin: 5px 0px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .blogDate {
+    margin-top: 10px;
+  }
+  .blogDate:hover,
+  .blogDate:active {
+    background: #794497; 
+  }
+  .blogMonth,
+  .blogDay,
+  .blogYear {
+    display: block;
+  }
+  .blogMonth {
+    width: 100px;
+    height: 16px;
+    margin: 5px 0px;
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+  }
+  .blogDay {
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+  }
+  .blogYear {
+    width: 100px;
+    height: 16px;
+    margin: 5px 0px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .blogBody {
+    margin-left: 110px; /* 100px info blocks plus 10px margin */
+    padding: 0px;
+  }
+  .blogFooter {
+    padding-top: 20px;
+    clear: both;
+  }
+  
+  /*
+   * Side bar in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #sidebar {
+    width: 31.25%;
+    margin: 0 1.04167%;
+    margin-bottom: 20px;
+    float: right;
+  }
+  .sidebarItem {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  #intro,
+  #tagCloud,
+  #twitter {
+    display: block;
+  }
+  #searchBundle.rounded {
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+       -moz-background-clip: padding;
+    -webkit-background-clip: padding-box; 
+            background-clip: padding-box;
+  }
+  
+  /*
+   * Footer
+   * ---------------------------------------------------------------------------
+   */
+  #footer {
+    clear: both;
+    margin: 20px 1.04167%;
+  }
+  
+}
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * End second layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * Begin third layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
+ 
+@media screen and (min-width: 1280px) {
+
+  /*
+   * Header, which includes the top banner and navigation
+   * ---------------------------------------------------------------------------
+   */ 
+  #header {
+    width: 47.91666%; /* 6 columns, 5 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+    float: right;
+  }
+  .nav {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  
+  /*
+   * Main content area in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #content {
+    width: 47.91666%; /* 6 columns, 5 gutters */
+    margin: 20px 1.04167%; /* Half a gutter */
+  }
+  
+  /*
+   * Side bar in middle section
+   * ---------------------------------------------------------------------------
+   */
+  #sidebar {
+    width: 47.91666%; /* 6 columns, 5 gutters */
+    margin: 0 1.04167%; /* Half a gutter */
+  }
+  .sidebarItem {
+    width: 47.82608%; /* 3 columns, 2 gutters */
+  }
+  #intro,
+  #tagCloud {
+    float: left;
+    margin-right: 2.17391%;
+  }
+  #search,
+  #twitter {
+    float: right;
+    margin-left: 2.17391%;
+  }
+
+}
+ 
+/*
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ * End third layout
+ * -----------------------------------------------------------------------------
+ * |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ * -----------------------------------------------------------------------------
+ */
